@@ -1,0 +1,17 @@
+{{> Header }}
+
+<h1>All Todos</h1>
+
+{{#unless todos}}
+	<p>No todos found</p>
+{{else}}
+	<ol id="todos">
+		{{#each todos}}
+			<li todo-id="{{ this.id }}" status="{{ this.status }}">
+				<a href="/todos/{{ this.id }}">{{ this.title }}</a>
+			</li>
+		{{/each}}
+	</ol>
+{{/unless}}
+
+{{> Footer}}

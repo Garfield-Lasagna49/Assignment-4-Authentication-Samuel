@@ -1,0 +1,16 @@
+{{> Header }}
+
+<h1>Create Todo</h1>
+
+<form method="POST" action="{{ path 'todos' }}" id="new-todo-form">
+	<fieldset class="grid">
+		<label>
+			Title
+			<input type="text" name="title">
+		</label>
+	</fieldset>
+	<textarea name="description" placeholder="Enter Description"></textarea>
+	<input type="submit" value="Create" id="new-todo-form-submit-button">
+</form>
+
+{{> Footer}}

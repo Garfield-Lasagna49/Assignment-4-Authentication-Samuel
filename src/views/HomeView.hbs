@@ -1,0 +1,25 @@
+{{> Header }}
+
+<section>
+	<h1>The Best Todo App</h1>
+	<p>{{ message }}</p>
+	<a href="{{ path 'todos/new' }}">Get Started!</a>
+</section>
+
+<section>
+	<h2>Key Features</h2>
+	<div>
+		{{#each features}}
+			<div>
+				<h3>{{ title }}</h3>
+				<p>{{ description }}</p>
+			</div>
+		{{/each}}
+	</div>
+</section>
+
+<section>
+	<blockquote>"This app has changed the way I manage my tasks!" - John Abbott</blockquote>
+</section>
+
+{{> Footer }}

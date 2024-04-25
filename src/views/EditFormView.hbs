@@ -1,0 +1,17 @@
+{{> Header }}
+
+<h1>Edit Todo</h1>
+
+<form action="{{path 'todos'}}/{{ todo.id }}" method="POST" id="edit-todo-form">
+	<input type="hidden" name="method" value="PUT">
+	<fieldset class="grid">
+		<label>
+			Title
+			<input type="text" name="title" placeholder="Enter new title" id="title" value="{{todo.title}}">
+		</label>
+	</fieldset>
+	<textarea name="description" placeholder="Enter Description" id="description">{{todo.description}}</textarea>
+	<input type="submit" value="Edit" id="edit-todo-form-submit-button">
+</form>
+
+{{> Footer }}
